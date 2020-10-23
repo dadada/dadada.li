@@ -1,10 +1,6 @@
-+++
-title =  "My $HOME"
-date = 2018-09-03
+# My $HOME
 
-[taxonomies]
-tags = ["organisation", "linux"]
-+++
+*2018-09-03*
 
 Recently, I came across a blog posting titled "[$HOME, sweet $HOME](https://morr.cc/home-sweet-home/)", where [@blinry](https://morr.cc/) advocates for structuring your `$HOME` directory based on projects and their activity.
 After reading this I felt inspired to finally have a look at the mess I made of my `$HOME` in the last years.

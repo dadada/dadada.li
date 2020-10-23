@@ -1,10 +1,6 @@
-+++
-title = "Managing stripped GPG keys"
-date = 2017-12-03
+# Managing stripped GPG keys
 
-[taxonomies]
-tags = ["gpg", "security"]
-+++
+*2017-12-03*
 
 ```
     +--(master pass)                   +----(user pass)--+
