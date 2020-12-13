@@ -6,7 +6,7 @@ See also my [GitHub](https://github.com/dadada) and [Gitlab](https://gitlab.com/
 
 - [nixpkgs](https://github.com/NixOS/nixpkgs)
   Nix Packages collection 
-- [nixos-hardware](https://github.com/NixOS/nixpkgs)
+- [nixos-hardware](https://github.com/NixOS/nixos-hardware)
   A collection of NixOS modules covering hardware quirks. 
 - [RecipeMD](https://github.com/tstehr/RecipeMD)
   Markdown recipe format and cli tool
@@ -31,7 +31,7 @@ See also my [GitHub](https://github.com/dadada) and [Gitlab](https://gitlab.com/
   Mailbox to Matrix bot
 - [inbox2matrix](https://github.com/dadada/inbox2matrix)
   Very hacky IMAP to Matrix bot
-- [portfs](https://github.com/dadada/portf)
+- [portfs](https://github.com/dadada/portfs)
   TCP port file system, not really a file system
 - [vim-edge-n-scratch](https://github.com/dadada/vim-edge-n-scratch)
   Vim with etching and sketching
