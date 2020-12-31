@@ -1,13 +1,13 @@
 { stdenv, pandoc }:
 stdenv.mkDerivation rec {
-  src = ./src;
+  src = ./.;
   nativeBuildInputs = [ pandoc ];
   buildPhase = ''
-    find . -iname "*.md" -type f -exec sh -c 'pandoc -s -f commonmark -t html --template template.html -o "''${0%.md}.html" "''${0}"' {} \;
+    ./build.sh
   '';
   installPhase = ''
     mkdir -p $out
-    cp -r . $out/
+    cp -r src/* $out/
   '';
   name = "dadada.li";
   version = "0.1";
