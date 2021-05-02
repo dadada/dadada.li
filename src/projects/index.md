@@ -1,4 +1,6 @@
-# Projects
+---
+title: Projects
+...
 
 See also my [GitHub](https://github.com/dadada) and [Gitlab](https://gitlab.com/dadada_).
 

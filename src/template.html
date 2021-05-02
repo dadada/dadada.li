@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="dadada" />
-  <title>dadada</title>
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 </head>
 <body>
+  $if(title)$
+  <h1>$title$</h1>
+  $endif$
 $body$
 </body>
 </html>

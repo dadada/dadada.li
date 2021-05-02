@@ -1,4 +1,6 @@
-# My $HOME
+---
+title: My $HOME
+...
 
 *2018-09-03*
 

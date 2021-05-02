@@ -1,4 +1,6 @@
-# systemd.generator(7)
+---
+title: systemd.generator(7)
+...
 
 *2019-03-14*
 
