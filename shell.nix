@@ -2,5 +2,5 @@
 
 with pkgs;
 {
-  this = callPackage ./default.nix { };
+  this = callPackage ./nix { };
 }

@@ -1,3 +1,4 @@
 #!/bin/sh
 
-find . -iname "*.md" -type f -exec sh -c 'pandoc -s -f markdown -t html --template=src/template.html -o "${0%.md}.html" "${0}"' {} \;
+find src -type d -exec sh -c 'srcpath="$(realpath ${0})"; outpath=$(realpath "build${0#src}"); echo "src=$srcpath; dst=$outpath"; mkdir -p "$outpath" && cd "$srcpath" && pandoc -d "${srcpath}/defaults.pandoc" -o "${outpath}/index.html" ' {} \;
+

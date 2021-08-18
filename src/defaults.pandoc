@@ -1,0 +1,13 @@
+# Fallbacks
+
+from: markdown
+to: html5
+
+input-files:
+- index.md
+
+standalone: true
+metadata:
+  author:
+  - dadada
+  title: dadada

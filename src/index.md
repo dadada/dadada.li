@@ -1,7 +1,3 @@
----
-title: dadada
-...
-
 **Welcome to my personal homepage ;-)**
 
 ## About this page

@@ -1,7 +1,3 @@
----
-title: systemd.generator(7)
-...
-
 *2019-03-14*
 
 [Recording](https://www.youtube.com/watch?v=X88zHJjodFw)

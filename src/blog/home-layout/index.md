@@ -1,7 +1,3 @@
----
-title: My $HOME
-...
-
 *2018-09-03*
 
 Recently, I came across a blog posting titled "[$HOME, sweet $HOME](https://morr.cc/home-sweet-home/)", where [@blinry](https://morr.cc/) advocates for structuring your `$HOME` directory based on projects and their activity.

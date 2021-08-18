@@ -1,7 +1,3 @@
----
-title: Managing stripped GPG keys
-...
-
 *2017-12-03*
 
 ```
