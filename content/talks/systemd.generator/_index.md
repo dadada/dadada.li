@@ -1,4 +1,8 @@
-*2019-03-14*
+---
+title: systemd.generator(7)
+data: 2019-03-14
+---
+# systemd.generator(7)
 
 [Recording](https://www.youtube.com/watch?v=X88zHJjodFw)
 

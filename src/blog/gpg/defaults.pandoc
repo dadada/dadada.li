@@ -1,3 +1,0 @@
-defaults: ../../defaults.pandoc
-metadata:
-  title: Managing stripped GPG keys

@@ -1,3 +1,0 @@
-defaults: ../../defaults.pandoc
-metadata:
-  title: systemd.generator(7)

@@ -1,8 +1,0 @@
-defaults:
-- ../defaults.pandoc
-input-files:
-- index.md
-template: ../template.html
-
-metadata:
-  title: dadada's projects

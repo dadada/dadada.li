@@ -1,4 +1,8 @@
-*2017-12-03*
+---
+title: Managing stripped GPG keys
+date: 2017-12-03
+---
+# Managing stripped GPG keys
 
 ```
     +--(master pass)                   +----(user pass)--+
