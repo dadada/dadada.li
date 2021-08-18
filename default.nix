@@ -1,14 +1,14 @@
-{ stdenv, pandoc }:
+{ stdenv, hugo }:
 stdenv.mkDerivation rec {
   src = ./.;
-  nativeBuildInputs = [ pandoc ];
+  nativeBuildInputs = [ hugo ];
   buildPhase = ''
-    ./build.sh
+    hugo
   '';
   installPhase = ''
     mkdir -p $out
-    cp -r src/* $out/
+    cp -r public/* $out
   '';
   name = "dadada.li";
-  version = "0.1";
+  version = "0.2";
 }
