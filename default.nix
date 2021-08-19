@@ -1,7 +1,7 @@
 { stdenv, hugo, hugo-theme-anubis }:
 stdenv.mkDerivation rec {
   src = ./.;
-  nativeBuildInputs = [ hugo ];
+  nativeBuildInputs = [ hugo hugo-theme-anubis ];
   # avoid git submodules using flakes :-)
   patchPhase = ''
     mkdir -p themes/
