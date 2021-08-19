@@ -1,0 +1,41 @@
+{
+  "nodes": {
+    "hugo-theme-anubis": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1626675855,
+        "narHash": "sha256-Vj77NcXxPOcatDbLvW+d90hsUpYH+2eyhpyXv82ZTts=",
+        "owner": "mitrichius",
+        "repo": "hugo-theme-anubis",
+        "rev": "5dab60e04a37896c09a32137aefe821c63b3af04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitrichius",
+        "repo": "hugo-theme-anubis",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1629226339,
+        "narHash": "sha256-szvgmQcUJM3Kv/wNyIn+wtMrrvsks0bk9JOqI2Ij8Ao=",
+        "path": "/nix/store/vy5l0dvdwwhyc988z185f9i7rqbc1n8y-source",
+        "rev": "2435ea48c3b295d9cd490535730bb13ab8cfd8a5",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "hugo-theme-anubis": "hugo-theme-anubis",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
