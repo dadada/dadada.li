@@ -1,0 +1,30 @@
+baseURL: 'https://dadada.li/'
+languageCode: 'en-us'
+title:  'dadada'
+theme: 'anubis'
+languageCode: 'en-us'
+
+params:
+  author: 'dadada'
+  dateFormat: '2006-01-02'
+  social:
+  - id: github
+    name: dadada
+  - id: mastodon
+    name: '@dadada@chaos.social'
+
+menu:
+  main:
+  - identifier: blog
+    name: Blog
+    title: Blog
+    url: /blog/
+  - identifier: projects
+    name: Projects
+    title: Projects
+    url: /projects/
+  - identifier: talks
+    name: Talks
+    title: Talks
+    url: /talks/
+
