@@ -10,6 +10,5 @@
 
   outputs = { self, hugo-theme-anubis, nixpkgs }: {
     packages.x86_64-linux.homePage = nixpkgs.legacyPackages.x86_64-linux.callPackage ./default.nix { inherit hugo-theme-anubis; };
-    defaultPackage.x86_64-linux = self.packages.x86_64-linux.homePage;
   };
 }
