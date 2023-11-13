@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>dadada's blog</title>
+  <link href="https://dadada.li/blog"/>
+  <updated>2023-11-13T20:06:45+01:00</updated>
+  <author>
+    <name>Tim Schubert</name>
+  </author>
+  <id>urn:uuid:aebe0d6d-40d7-46f5-8ad7-5ad5b60e9c57</id>
+  <entry>
+    <title>NixOS for Lazy Admins</title>
+    <link href="https://gitli.stratum0.org/dadada/lazy-admin-talk"/>
+    <id>urn:uuid:0879def1-bd89-4fa0-97fc-58541378c714</id>
+    <updated>2023-09-14</updated>
+    <summary><a href="https://bbb.stratum0.org/playback/presentation/2.3/b3f9875e5e8180697cd3d3029085a7ef441d513d-1694710080145">Recording</a></summary>
+  </entry>
+  <entry>
+    <title>Gitlab als Archivar</title>
+    <link href="https://dadada.li/talks/pad-archiver"/>
+    <id>urn:uuid:0eca066e-922e-4df7-a495-bff5a78448ef</id>
+    <updated>2022-06-14</updated>
+    <summary>Gitlab als Archivar</summary>
+  </entry>
+  <entry>
+    <title>systemd-generator(7)</title>
+    <link href="https://dadada.li/talks/systemd-generator"/>
+    <id>urn:uuid:d4ec7148-747e-4724-9d83-d565b96f28e5</id>
+    <updated>2019-03-14</updated>
+    <summary>systemd-generator(7)</summary>
+  </entry>
+  <entry>
+    <title>My $HOME</title>
+    <link href="https://dadada.li/blog/home-layout"/>
+    <id>urn:uuid:ffe1d09a-87aa-448a-a80c-efa175430bbf</id>
+    <updated>2018-09-03</updated>
+    <summary>My $HOME</summary>
+  </entry>
+  <entry>
+    <title>Managing Striped GPG Keys</title>
+    <link href="https://dadada.li/blog/gpg"/>
+    <id>urn:uuid:ff6cbe87-67f8-415f-9ed5-6ec2a99a51a3</id>
+    <updated>2017-12-03</updated>
+    <summary>Managing Striped GPG Keys</summary>
+  </entry>
+</feed>
