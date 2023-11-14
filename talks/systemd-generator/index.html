@@ -1,100 +1,132 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>systemd.generator(7)</title>
-    <link rel="alternate" type="application/atom+xml" href="https://dadada.li/feed.xml" title="dadada">
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="https://dadada.li/feed.xml"
+      title="dadada"
+    />
   </head>
-  <body style="min-width:30em; max-width:60em; margin-left:auto; margin-right:auto">
+  <body
+    style="
+      min-width: 30em;
+      max-width: 60em;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  >
     <header>
       <nav>
         <a href="https://dadada.li/">dadada</a>
       </nav>
     </header>
-<main>
-<h1 id="systemd.generator7">systemd.generator(7)</h1>
-<p><a
-href="https://www.youtube.com/watch?v=X88zHJjodFw">Recording</a></p>
-<h1 id="dynamische-systeme-sind-schwierig">Dynamische Systeme sind
-schwierig</h1>
-<ul>
-<li>➤ Devices, Mountpoints, Services, Timer möglichst als Unit</li>
-<li>Transitionstechnologie für <code>/etc/fstab</code> und SysV
-init-Skripte</li>
-<li>Hooks für den Bootprozess (System-Update, Resume, Debug …)</li>
-<li>Umgebungsvariablen setzen</li>
-<li>➤ Generatoren generieren beim Boot dynamisch Units</li>
-</ul>
-<h1 id="calling-convention">Calling convention</h1>
-<p><code># /path/to/generator normal-dir early-dir late-dir</code></p>
-<ul>
-<li>Generatoren sind in
-<ul>
-<li><code>/run/systemd/{system,user}-generators/*</code></li>
-<li><code>/etc/systemd/{system,user}-generators/*</code></li>
-<li><code>/usr/lib/systemd/{system,user}-generators/*</code></li>
-<li><code>/usr/local/lib/systemd/{system,user}-generators/*</code></li>
-</ul></li>
-</ul>
-<h1 id="generierte-units">Generierte Units</h1>
-<ul>
-<li>neu generieren mit <code>systemctl daemon-reload</code></li>
-<li>generierte Units landen in
-<ul>
-<li><code>normal-dir</code> ➤ <code>/run/systemd/generator</code></li>
-<li><code>early-dir</code> ➤
-<code>/run/systemd/generator.early</code></li>
-<li><code>late-dir</code> ➤
-<code>/run/systemd/generator.late</code></li>
-</ul></li>
-</ul>
-<h1 id="templating">Templating</h1>
-<ul>
-<li>generierte Units dürfen auch sein
-<ul>
-<li>Templates</li>
-<li>Instanzen von Templates (<code>getty@tty1.service</code>)</li>
-</ul></li>
-<li>Generatoren können auch Symlinks in <code>.wants/</code>,
-<code>.target</code> und <code>.requires/</code> erstellen</li>
-</ul>
-<h1 id="abhängigkeiten-vermeiden">Abhängigkeiten vermeiden</h1>
-<ul>
-<li>kein syslog oder journal benutzen</li>
-<li>keine Units starten</li>
-<li>keine nicht essentiellen Dateisysteme verwenden (aber /proc, /usr,
-/sys und /dev)</li>
-<li>Generatoren werden parallel ausgeführt</li>
-</ul>
-<h1 id="performance">Performance</h1>
-<p>kann Boot verlangsamen ➤ Nicht mit bash implementieren, lieber C</p>
-<h1 id="debugging">Debugging</h1>
-<pre><code>dir=$(mktemp -d)
+    <main>
+      <h1 id="systemd.generator7">systemd.generator(7)</h1>
+      <p><a href="https://www.youtube.com/watch?v=X88zHJjodFw">Recording</a></p>
+      <h1 id="dynamische-systeme-sind-schwierig">
+        Dynamische Systeme sind schwierig
+      </h1>
+      <ul>
+        <li>➤ Devices, Mountpoints, Services, Timer möglichst als Unit</li>
+        <li>
+          Transitionstechnologie für <code>/etc/fstab</code> und SysV
+          init-Skripte
+        </li>
+        <li>Hooks für den Bootprozess (System-Update, Resume, Debug …)</li>
+        <li>Umgebungsvariablen setzen</li>
+        <li>➤ Generatoren generieren beim Boot dynamisch Units</li>
+      </ul>
+      <h1 id="calling-convention">Calling convention</h1>
+      <p><code># /path/to/generator normal-dir early-dir late-dir</code></p>
+      <ul>
+        <li>
+          Generatoren sind in
+          <ul>
+            <li><code>/run/systemd/{system,user}-generators/*</code></li>
+            <li><code>/etc/systemd/{system,user}-generators/*</code></li>
+            <li><code>/usr/lib/systemd/{system,user}-generators/*</code></li>
+            <li>
+              <code>/usr/local/lib/systemd/{system,user}-generators/*</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h1 id="generierte-units">Generierte Units</h1>
+      <ul>
+        <li>neu generieren mit <code>systemctl daemon-reload</code></li>
+        <li>
+          generierte Units landen in
+          <ul>
+            <li>
+              <code>normal-dir</code> ➤ <code>/run/systemd/generator</code>
+            </li>
+            <li>
+              <code>early-dir</code> ➤ <code>/run/systemd/generator.early</code>
+            </li>
+            <li>
+              <code>late-dir</code> ➤ <code>/run/systemd/generator.late</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h1 id="templating">Templating</h1>
+      <ul>
+        <li>
+          generierte Units dürfen auch sein
+          <ul>
+            <li>Templates</li>
+            <li>Instanzen von Templates (<code>getty@tty1.service</code>)</li>
+          </ul>
+        </li>
+        <li>
+          Generatoren können auch Symlinks in <code>.wants/</code>,
+          <code>.target</code> und <code>.requires/</code> erstellen
+        </li>
+      </ul>
+      <h1 id="abhängigkeiten-vermeiden">Abhängigkeiten vermeiden</h1>
+      <ul>
+        <li>kein syslog oder journal benutzen</li>
+        <li>keine Units starten</li>
+        <li>
+          keine nicht essentiellen Dateisysteme verwenden (aber /proc, /usr,
+          /sys und /dev)
+        </li>
+        <li>Generatoren werden parallel ausgeführt</li>
+      </ul>
+      <h1 id="performance">Performance</h1>
+      <p>kann Boot verlangsamen ➤ Nicht mit bash implementieren, lieber C</p>
+      <h1 id="debugging">Debugging</h1>
+      <pre><code>dir=$(mktemp -d)
 SYSTEMD_LOG_LEVEL=debug /usr/lib/systemd/system-generators/systemd-fstab-generator &quot;$dir&quot; &quot;$dir&quot; &quot;$dir&quot;
 find $dir</code></pre>
-<ul>
-<li>syslog(3) ist nicht vefügbar</li>
-<li>keine Magie versuchen</li>
-</ul>
-<h1 id="nicht-geeignet-für">Nicht geeignet für</h1>
-<ul>
-<li>Ersatz von init-Skripten ➤ systemd-sysv-generator(8)</li>
-<li>dynamische Konfigurationsdateien ➤ <code>ExecStartPre=</code> oder
-Service mit <code>Before=</code></li>
-</ul>
-<h1 id="beispiele">Beispiele</h1>
-<ul>
-<li><p>systemd-fstab-generator(8)</p></li>
-<li><p>systemd-debug-generator(8)</p></li>
-<li><p>systemd-getty-generator(8)</p></li>
-<li><p>systemd-sysv-generator(8)</p></li>
-<li><p>systemd.environment-generator(7)</p></li>
-</ul>
-<h1 id="source">Source</h1>
-<ul>
-<li><code>man 7 systemd.generator</code></li>
-</ul>
-</main>
-<footer>Released: 2019-03-14</footer>
-</body>
+      <ul>
+        <li>syslog(3) ist nicht vefügbar</li>
+        <li>keine Magie versuchen</li>
+      </ul>
+      <h1 id="nicht-geeignet-für">Nicht geeignet für</h1>
+      <ul>
+        <li>Ersatz von init-Skripten ➤ systemd-sysv-generator(8)</li>
+        <li>
+          dynamische Konfigurationsdateien ➤ <code>ExecStartPre=</code> oder
+          Service mit <code>Before=</code>
+        </li>
+      </ul>
+      <h1 id="beispiele">Beispiele</h1>
+      <ul>
+        <li><p>systemd-fstab-generator(8)</p></li>
+        <li><p>systemd-debug-generator(8)</p></li>
+        <li><p>systemd-getty-generator(8)</p></li>
+        <li><p>systemd-sysv-generator(8)</p></li>
+        <li><p>systemd.environment-generator(7)</p></li>
+      </ul>
+      <h1 id="source">Source</h1>
+      <ul>
+        <li><code>man 7 systemd.generator</code></li>
+      </ul>
+    </main>
+    <footer>Released: 2019-03-14</footer>
+  </body>
 </html>

@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>dadada's web log</title>
-    <link rel="alternate" type="application/atom+xml" href="https://dadada.li/feed.xml" title="dadada">
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="https://dadada.li/feed.xml"
+      title="dadada"
+    />
   </head>
-  <body style="min-width:30em; max-width:60em; margin-left:auto; margin-right:auto">
+  <body
+    style="
+      min-width: 30em;
+      max-width: 60em;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  >
     <header>
-	    <nav>
+      <nav>
         <a href="https://dadada.li/">dadada</a>
-	    </nav>
-	  </header>
-		<main>
+      </nav>
+    </header>
+    <main>
       <h1>My $HOME</h1>
-			<p>Recently, I came across a blog posting titled <a href="https://morr.cc/home-sweet-home/">$HOME, sweet $HOME</a>, where <a href="https://morr.cc/"">@blinry</a> advocates for structuring your <code>HOME</code> directory based on projects and their activity. After reading this I felt inspired to finally have a look at the mess I made of my $HOME in the last years.</p>
-      <p>A few things about my old <code>$HOME</code>:
-        <ul>
-          <li><code>Documents</code> contained basically everything I had accumulated during the last years besides music, videos, pictures and source code.</li>
-          <li><code>projects</code> just contained one gigantic folder of all projects that I ever worked on. - the rest was based on the default <a href="https://freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></li>
-        </ul>
-			</p>
-			<p>If you sorted the files by file type like the default XDG directories
-			suggest, files from one project may be scattered across many different
-			directories.</p>
-			<p>So my goal for the new <code>$HOME</code> was to have a clean directory structure where: - it is obvious where to place new files - paths do not become too long to type out - the directory structure relates to how I work</p>
-			<p>A quick tour of my new <code>$HOME</code>:</p>
+      <p>
+        Recently, I came across a blog posting titled
+        <a href="https://morr.cc/home-sweet-home/">$HOME, sweet $HOME</a>, where
+        <a href="https://morr.cc/">@blinry</a> advocates for structuring your
+        <code>HOME</code> directory based on projects and their activity. After
+        reading this I felt inspired to finally have a look at the mess I made
+        of my $HOME in the last years.
+      </p>
+      <p>A few things about my old <code>$HOME</code>:</p>
+
+      <ul>
+        <li>
+          <code>Documents</code> contained basically everything I had
+          accumulated during the last years besides music, videos, pictures and
+          source code.
+        </li>
+        <li>
+          <code>projects</code> just contained one gigantic folder of all
+          projects that I ever worked on. - the rest was based on the default
+          <a href="https://freedesktop.org/wiki/Software/xdg-user-dirs/"
+            >xdg-user-dirs</a
+          >
+        </li>
+      </ul>
+      <p>
+        If you sorted the files by file type like the default XDG directories
+        suggest, files from one project may be scattered across many different
+        directories.
+      </p>
+      <p>
+        So my goal for the new <code>$HOME</code> was to have a clean directory
+        structure where: - it is obvious where to place new files - paths do not
+        become too long to type out - the directory structure relates to how I
+        work
+      </p>
+      <p>A quick tour of my new <code>$HOME</code>:</p>
       <ul>
         <li><code>lib</code> for immutable files</li>
         <li><code>src</code> for mutable files</li>
@@ -32,19 +68,35 @@
         <li><code>tmp</code> for unsorted files and downloads</li>
       </ul>
       <h2 id="the-project-directory">The project directory</h2>
-      <p>All of my projects are stored in <code>src</code>. I use a flat directory structure, where every project has its own subdirectory based on its name. Projects can become part of one or more larger contexts through the use of tags.</p>
+      <p>
+        All of my projects are stored in <code>src</code>. I use a flat
+        directory structure, where every project has its own subdirectory based
+        on its name. Projects can become part of one or more larger contexts
+        through the use of tags.
+      </p>
       <h2 id="tags">Tags</h2>
-      <p>Tag directories are stored in <code>tag</code>. Each directory stores symbolic links to parts of a project that can be distributed around <code>lib</code> and <code>src</code>. One possible use for the tag directories is creating workbenches. If I use some directories in <code>lib</code> or <code>src</code> in different contexts,
-      <code>tag</code> can be used to include them in multiple workbenches.</p>
+      <p>
+        Tag directories are stored in <code>tag</code>. Each directory stores
+        symbolic links to parts of a project that can be distributed around
+        <code>lib</code> and <code>src</code>. One possible use for the tag
+        directories is creating workbenches. If I use some directories in
+        <code>lib</code> or <code>src</code> in different contexts,
+        <code>tag</code> can be used to include them in multiple workbenches.
+      </p>
       <p>An example workflow</p>
-			<pre>
+      <pre>
 $ cd tag
 $ mkdir -p course1/examples
 $ ln -s ~/src/example1 course1/examples/
 $ ln -s ~/lib/courses/course1 course1/material
 $ rm -r course1
-			</pre>
-      <p>I create new tags for various reasons, but mostly one for each larger context (e.g. work, hobbies, admin foo, thesis, courseXY) and some more for tracking project activity. There are four different tags in <code>tag</code> directory right now for tracking project activity:</p>
+</pre>
+      <p>
+        I create new tags for various reasons, but mostly one for each larger
+        context (e.g. work, hobbies, admin foo, thesis, courseXY) and some more
+        for tracking project activity. There are four different tags in
+        <code>tag</code> directory right now for tracking project activity:
+      </p>
       <ul>
         <li>permanent</li>
         <li>active</li>
@@ -57,6 +109,6 @@ $ rm -r course1
         <figcaption aria-hidden="true">Basically this</figcaption>
       </figure>
     </main>
-		<footer>Released: 2018-09-03</footer>
+    <footer>Released: 2018-09-03</footer>
   </body>
 </html>
