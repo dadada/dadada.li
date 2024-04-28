@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>About this web page</title>
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="https://dadada.li/feed.xml"
+      title="dadada"
+    />
+  </head>
+  <body
+    style="
+      min-width: 30em;
+      max-width: 60em;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  >
+    <header>
+      <nav>
+        <a href="https://dadada.li/">dadada</a>
+      </nav>
+    </header>
+    <main>
+      <h1>About this web page</h1>
+      <p>
+        This an explanation (or justification?) of how this page is created. The
+        takeaway is that every page is a single HTML file and no templating is
+        involved.
+      </p>
+      <h2>Creating a page</h2>
+      <ol>
+        <li>
+          Copy <code>index.html</code> to <code>page-name/index.html</code>
+        </li>
+        <li>Update <code>title</code> in <code>head</code></li>
+        <li>Write HTML contents to <code>body</code></li>
+        <li>
+          Update <code>feed.xml</code>. UUIDs can be inserted by calling
+          <code>uuidgen</code> from the editor and inserting the resulting UUID
+        </li>
+      </ol>
+      <h2>Why write HTML by hand?!</h2>
+      <h3>Reproducibility</h3>
+      <p>
+        HTML is pretty consistently displayed across most modern web-browsers,
+        while multiple templating engines and markdown parsers are not always as
+        consistent in their interpretation of markdown, and the details of how
+        they render markdown may change over time.
+      </p>
+      <h3>Debugging</h3>
+      <p>
+        The feedback when editing the HTML files is immediate without an
+        intermediate compilation step that may break when there is an issue with
+        some template or the templating engine. Since web browsers are quite
+        lenient in what they accept, even minor problems in the HTML will still
+        at least partially display the page while it is beeing edited. Developer
+        tools of modern web browsers provide extensive feedback about errors in
+        the HTML, making it easy to debug the draft. At the same time, errors in
+        the templates and the templating engine may lead to arbitrarily complex
+        bugs.
+      </p>
+      <h3>Future-Proofing</h3>
+      <p>
+        I like to avoid external dependencies if the benefit from using them is
+        not significant or easily acchievable otherwise. Static site generators
+        include markdown parsers and templating engines which have a lot of
+        external dependencies.
+      </p>
+      <h3>Duplicate State</h3>
+      <p>
+        A problem with single-file HTML pages is that there are multiple copies
+        of the same data, such as the page-style and the URL to the feed. This
+        is solved by having very few such data, so it is less likely to change,
+        and updating it can be done with reasonable effort through
+        search-and-replace.
+      </p>
+      <h3>Unreadable HTML</h3>
+      <p>
+        Editing HTML by hand bears the risk that the HTML contains errors or the
+        formatting is inconsistent. Formatters like <code>prettier</code> can be
+        used to check the HTML and reformat it. The diff can be easily inspected
+        to check for inconsistencies between the initial HTML and the formatted
+        HTML.
+      </p>
+    </main>
+    <footer>Released: 2024-04-28</footer>
+  </body>
+</html>

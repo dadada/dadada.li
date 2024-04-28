@@ -8,6 +8,13 @@
   </author>
   <id>urn:uuid:aebe0d6d-40d7-46f5-8ad7-5ad5b60e9c57</id>
   <entry>
+    <title>About this web page</title>
+    <link href="https://dadada.li/blog/about"/>
+    <id>urn:uuid:0f4e27c5-bef2-4691-b8a8-2cbc0f593c8f</id>
+    <updated>2024-04-28</updated>
+    <summary>About this web page</summary>
+  </entry>
+  <entry>
     <title>NixOS for Lazy Admins</title>
     <link href="https://gitli.stratum0.org/dadada/lazy-admin-talk"/>
     <id>urn:uuid:0879def1-bd89-4fa0-97fc-58541378c714</id>
